@@ -4,12 +4,7 @@ var path = require('path');
 
 const PORT = process.env.PORT || 80;
 
-var options = {
-    key: fs.readFileSync('key.pem'),
-    cert: fs.readFileSync('cert.pem')
-};
-
-https.createServer(options, function (request, response) {
+https.createServer(function (request, response) {
 
     // Website you wish to allow to connect
     response.setHeader('Access-Control-Allow-Origin', '*');
