@@ -154,6 +154,9 @@
                 padding-top: 8vh;
             }
         }
+        section {
+            height: 20vh;
+        }
         fieldset {
             border: 0;
         }
@@ -211,16 +214,13 @@
         </section>
         <section>
             <h2>Lists with Mustache</h2>
-            <amp-list src="https://ageo-amp.heroku.com/list-data.json" width="300" height="200" layout="responsive" template="todo-template">
-                <ul>
-                    <template type="amp-mustache" id="todo-template">
+            <ul>
+                <amp-list src="./list-data.json" width="300" height="200" layout="responsive">
+                    <template type="amp-mustache">
                         <li>{{name}}</li>
                     </template>
-                </ul>
-                <div overflow role=button aria-label="Show more" class="list-overflow">
-                    Show more
-                </div>
-            </amp-list>
+                </amp-list>
+            </ul>
         </section>
     </article>
 </body>
