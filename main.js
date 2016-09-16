@@ -12,7 +12,7 @@ var options = {
 https.createServer(options, function (request, response) {
 
     // Website you wish to allow to connect
-    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Origin', 'https://ageo-amp.heroku.com');
 
     var filePath = '.' + request.url;
     if (filePath == './')
