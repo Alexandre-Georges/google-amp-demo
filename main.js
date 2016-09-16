@@ -1,10 +1,10 @@
-var http = require('http');
+var https = require('https');
 var fs = require('fs');
 var path = require('path');
 
 const PORT = process.env.PORT || 80;
 
-http.createServer(function (request, response) {
+https.createServer(function (request, response) {
 
     // Website you wish to allow to connect
     response.setHeader('Access-Control-Allow-Origin', '*');
@@ -57,4 +57,4 @@ http.createServer(function (request, response) {
     });
 
 }).listen(PORT);
-console.log('Server running at http://127.0.0.1:' + PORT);
+console.log('Server running at https://127.0.0.1:' + PORT);
