@@ -11,6 +11,9 @@ var options = {
 
 https.createServer(options, function (request, response) {
 
+    // Website you wish to allow to connect
+    response.setHeader('Access-Control-Allow-Origin', 'https://ageo-amp.heroku.com');
+
     var filePath = '.' + request.url;
     if (filePath == './')
         filePath = './index.html';
@@ -53,7 +56,6 @@ https.createServer(options, function (request, response) {
             }
         }
         else {
-            response.setHeader('Access-Control-Allow-Origin', 'https://ageo-amp.heroku.com');
             response.writeHead(200, { 'Content-Type': contentType });
             response.end(content, 'utf-8');
         }
