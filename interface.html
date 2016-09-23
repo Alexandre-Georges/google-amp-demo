@@ -14,6 +14,8 @@
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <style amp-custom>
         @font-face {
@@ -154,11 +156,24 @@
                 padding-top: 8vh;
             }
         }
-        section {
+        article > section {
             height: 20vh;
+        }
+        article > section:nth-child(3) {
+            margin-bottom: 200px;
+        }
+        article amp-accordion > section:nth-child(3) {
+            background-color: white;
+        }
+        .title {
+            background-color: black;
+            padding-left: 1vw;
         }
         fieldset {
             border: 0;
+        }
+        .centered {
+            margin: 0 auto;
         }
 
     </style>
@@ -168,10 +183,10 @@
     <amp-sidebar id="mobile-menu" layout="nodisplay">
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="images.html">Images</a></li>
-                <li><a href="components.html">Components</a></li>
-                <li><a href="interface.html">Interface</a></li>
+                <li><a rel="prerender" href="/">Home</a></li>
+                <li><a rel="prerender" href="images.html">Images</a></li>
+                <li><a rel="prerender" href="components.html">Components</a></li>
+                <li><a rel="prerender" href="interface.html">Interface</a></li>
             </ul>
         </nav>
     </amp-sidebar>
@@ -191,10 +206,10 @@
         <nav>
             <ul class="table">
                 <li class="row">
-                    <a class="cell" href="/"><span>Home</span></a>
-                    <a class="cell" href="images.html"><span>Images</span></a>
-                    <a class="cell" href="components.html"><span>Components</span></a>
-                    <a class="cell" href="interface.html"><span>Interface</span></a>
+                    <a rel="prerender" class="cell" href="/"><span>Home</span></a>
+                    <a rel="prerender" class="cell" href="images.html"><span>Images</span></a>
+                    <a rel="prerender" class="cell" href="components.html"><span>Components</span></a>
+                    <a rel="prerender" class="cell" href="interface.html"><span>Interface</span></a>
                 </li>
             </ul>
         </nav>
@@ -221,6 +236,34 @@
                     </template>
                 </amp-list>
             </ul>
+        </section>
+        <section>
+            <h2>Accordion</h2>
+            <amp-accordion>
+                <section>
+                    <h2 class="title">Definition</h2>
+                    <div><p>An accordion provides a way for viewers to glance at the content outline and jump to any section. This is helpful for handheld mobile devices where even a couple of sentences into a section requires scrolling.</p></div>
+                </section>
+                <section>
+                    <h2 class="title">Lorem Ipsum</h2>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris bibendum augue quis lectus suscipit tincidunt. Maecenas at sollicitudin felis. Quisque suscipit felis non fringilla blandit. Integer ac interdum enim. Proin sed nulla efficitur, mattis enim a, suscipit urna. Maecenas semper, dolor quis lacinia suscipit, nulla odio feugiat nibh, a vulputate mi nisl vel tortor. Nulla non lacus volutpat lacus ornare dignissim quis tristique ex. Pellentesque semper volutpat mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis ac sollicitudin dolor. Etiam egestas neque magna, a tristique arcu vehicula in. Integer ac dolor libero. Integer elementum malesuada ipsum ut tincidunt.</p>
+                        <p>Quisque id rutrum dui. Fusce auctor odio et ex efficitur, eu suscipit odio luctus. Duis tempor ac lectus a consectetur. Mauris euismod tincidunt sollicitudin. Nulla facilisi. Nam porta luctus egestas. Maecenas sodales fermentum arcu, eu vestibulum purus tempus vel. In sodales nisi id ex congue accumsan. Quisque orci tortor, dapibus nec nulla eu, dignissim feugiat dolor. Quisque ornare condimentum eros sit amet tincidunt. Sed vitae orci tincidunt augue condimentum rutrum pellentesque id lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent commodo dolor id consequat ultricies.</p>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="title">Image</h2>
+                    <amp-img class="centered" src="https://www.nublue.co.uk/blog/wp-content/uploads/2016/02/AMP-Project-logo.png" width="848" height="162"></amp-img>
+                </section>
+            </amp-accordion>
+        </section>
+        <section>
+            <h2>Carousel</h2>
+            <amp-carousel width="800" height="400" type="slides">
+                <amp-img src="http://www.gwebpro.com/wp-content/uploads/2016/05/Google-AMP.jpg" width="800" height="640" layout="responsive"></amp-img>
+                <amp-img src="https://bucketidncr_731.s3.amazonaws.com/ehlLjncr_1859SEW_amp.png" width="640" height="433" layout="responsive"></amp-img>
+                <amp-img src="http://searchengineland.com/figz/wp-content/seloads/2015/12/google-amp-speed-fast-ss-1920.jpg" width="1353" height="761" layout="responsive"></amp-img>
+            </amp-carousel>
         </section>
     </article>
 </body>

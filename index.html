@@ -154,10 +154,10 @@
     <amp-sidebar id="mobile-menu" layout="nodisplay">
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="images.html">Images</a></li>
-                <li><a href="components.html">Components</a></li>
-                <li><a href="interface.html">Interface</a></li>
+                <li><a rel="prerender" href="/">Home</a></li>
+                <li><a rel="prerender" href="images.html">Images</a></li>
+                <li><a rel="prerender" href="components.html">Components</a></li>
+                <li><a rel="prerender" href="interface.html">Interface</a></li>
             </ul>
         </nav>
     </amp-sidebar>
@@ -177,13 +177,33 @@
         <nav>
             <ul class="table">
                 <li class="row">
-                    <a class="cell" href="/"><span>Home</span></a>
-                    <a class="cell" href="images.html"><span>Images</span></a>
-                    <a class="cell" href="components.html"><span>Components</span></a>
-                    <a class="cell" href="interface.html"><span>Interface</span></a>
+                    <a rel="prerender" class="cell" href="/"><span>Home</span></a>
+                    <a rel="prerender" class="cell" href="images.html"><span>Images</span></a>
+                    <a rel="prerender" class="cell" href="components.html"><span>Components</span></a>
+                    <a rel="prerender" class="cell" href="interface.html"><span>Interface</span></a>
                 </li>
             </ul>
         </nav>
     </header>
+    <article>
+        <h2>What is Google AMP?</h2>
+        <ul>
+            <li>AMP HTML is HTML with some restrictions for reliable performance and some extensions for building rich content beyond basic HTML.</li>
+            <li>The AMP JS library ensures the fast rendering of AMP HTML pages.</li>
+            <li>The Google AMP Cache can be used to serve cached AMP HTML pages.</li>
+        </ul>
+        <ul>
+            <li>All external scripts are async</li>
+            <li>Static resource sizing</li>
+            <li>Extended components downloads do not block</li>
+            <li>One HTTP request to render the page</li>
+            <li>3rd party JS allowed in iframes</li>
+            <li>Inline CSS of 50kb max</li>
+            <li>Fonts downloaded efficiently</li>
+            <li>Minimize style recalculations</li>
+            <li>Animations are optimized for the GPU</li>
+            <li></li>
+        </ul>
+    </article>
 </body>
 </html>

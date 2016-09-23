@@ -165,10 +165,10 @@
     <amp-sidebar id="mobile-menu" layout="nodisplay">
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="images.html">Images</a></li>
-                <li><a href="components.html">Components</a></li>
-                <li><a href="interface.html">Interface</a></li>
+                <li><a rel="prerender" href="/">Home</a></li>
+                <li><a rel="prerender" href="images.html">Images</a></li>
+                <li><a rel="prerender" href="components.html">Components</a></li>
+                <li><a rel="prerender" href="interface.html">Interface</a></li>
             </ul>
         </nav>
     </amp-sidebar>
@@ -188,24 +188,24 @@
         <nav>
             <ul class="table">
                 <li class="row">
-                    <a class="cell" href="/"><span>Home</span></a>
-                    <a class="cell" href="images.html"><span>Images</span></a>
-                    <a class="cell" href="components.html"><span>Components</span></a>
-                    <a class="cell" href="interface.html"><span>Interface</span></a>
+                    <a rel="prerender" class="cell" href="/"><span>Home</span></a>
+                    <a rel="prerender" class="cell" href="images.html"><span>Images</span></a>
+                    <a rel="prerender" class="cell" href="components.html"><span>Components</span></a>
+                    <a rel="prerender" class="cell" href="interface.html"><span>Interface</span></a>
                 </li>
             </ul>
         </nav>
     </header>
     <article>
         <section>
+            <h2>Video</h2>
+            <amp-youtube data-videoid="lBTCB7yLs8Y" layout="responsive" width="480" height="270"></amp-youtube>
+        </section>
+        <section>
             <h2>Iframe</h2>
             <amp-iframe width=300 height=300 sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox" layout="responsive" frameborder="0" src="https://www.tugo.com/">
                 <amp-img layout="fill" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png" placeholder></amp-img>
             </amp-iframe>
-        </section>
-        <section>
-            <h2>Video</h2>
-            <amp-youtube data-videoid="lBTCB7yLs8Y" layout="responsive" width="480" height="270"></amp-youtube>
         </section>
         <section>
             <h2>Tweet</h2>
